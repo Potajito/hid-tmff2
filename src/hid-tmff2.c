@@ -674,6 +674,7 @@ static int tmff2_probe(struct hid_device *hdev, const struct hid_device_id *id)
 			if ((ret = tx_populate_api(tmff2)))
 				goto wheel_err;
 			break;
+		case TSPC_ACTIVE:
 		case TSXW_ACTIVE:
 			if ((ret = tsxw_populate_api(tmff2)))
 				goto wheel_err;
